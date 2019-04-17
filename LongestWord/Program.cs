@@ -8,6 +8,7 @@ namespace LongestWord
 {
     class Program
     {
+        string a;
         static void Main(string[] args)
         {
             Program a = new Program();
@@ -19,21 +20,22 @@ namespace LongestWord
         {
             string[] words = output.Split(' ');
             string b;
+            
             int wordArrayLength = words.Length;
             int x = 0;
             foreach(var word in words)
             {
-                string a;
+                
                 foreach(var word2 in words)
                 {
                     if(word2.Length > word.Length)
                     {
                         a = word2;
-                        Console.WriteLine("{0} : This is longest word now",a);
+                        
                     }
                 }
-                
             }
+            Console.WriteLine("Longest word is " + a);
             Console.ReadLine();
             
         }
